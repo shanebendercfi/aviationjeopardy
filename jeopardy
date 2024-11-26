@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy-style Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        h1 {
+            background-color: #004f91;
+            color: white;
+            padding: 20px;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        .category {
+            background-color: #004f91;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            font-size: 1.5em;
+        }
+        .question-cell {
+            background-color: #f4f4f4;
+            border: 3px solid #004f91;
+            font-size: 1.5em;
+            padding: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .question-cell:hover {
+            background-color: #d1e3f0;
+        }
+        .question-cell.selected {
+            background-color: #d1e3f0;
+        }
+        .question-cell:active {
+            background-color: #004f91;
+            color: white;
+        }
+        .answer-box {
+            font-size: 1.2em;
+            background-color: #ffff99;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Airplane Flying Handbook Jeopardy</h1>
+
+    <!-- Audio Background -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+    </audio>
+
+    <div class="game-board">
+        <!-- Category Titles -->
+        <div class="category">General Information</div>
+        <div class="category">Four For
